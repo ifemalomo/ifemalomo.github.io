@@ -1,0 +1,138 @@
+/* apply a google font from fonts.google.com */
+/* let us know if you want to learn to do this (or anything else in CSS) */
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Knewave&family=Josefin+Slab:wght@500&display=swap");
+/* generic styling */
+body {
+  font-family: "Coming Soon";
+  background-color: #eee;
+}
+
+h1 {
+  font-family: "Knewave";
+  font-size: 48px;
+}
+
+h2 {
+  letter-spacing: 2px;
+  color: slategray;
+  border-bottom: 1px solid #6e85b7;
+}
+
+a {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #6e85b7;
+  border-bottom: 2px solid transparent;
+  /* the below two lines will make any transitions/changes slow and smooth */
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+a:hover { /* when a link is hovered, it will change color and border smoothly */
+  color: #000;
+  border-bottom: 2px solid #6e85b7;
+}
+
+.emphasis { /* anything with the emphasis class will be bold */
+  font-weight: bolder;
+}
+
+/* setting up the container in the center to hold the sections */
+#container {
+  /* setting auto margins on a relatively positioned div will center it */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  width: 1200px;
+}
+body {  
+    background-image: linear-gradient(lightpink, slateblue);
+}
+
+img {
+    width: 600px;
+}
+
+.column {
+  flex: 50%;
+  padding: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.desc {
+  font-family: "Knewave";
+  color: mediumpurple;
+}
+/* styling each section (boxes inside the container) */
+.section {
+  z-index: 0;
+  border: 1px solid #fff;
+  padding: 5%;
+  margin: 10%;
+  /*margin-left: 200px;
+  margin-right: 40px;*/
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.64);
+}
+
+/* styling the header "about me" to be at the top */
+/* if you want the header to be "sticky" and not scroll, use position:fixed */
+.header {
+  z-index: 1; /* makes it so it will be above any overlapping elements (bigger number = front) */
+  padding-top: 10px;
+  letter-spacing: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  border-bottom: 5px solid #6e85b7;
+  text-align: center;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.header:hover {
+  color: #6e85b7;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-image: linear-gradient(cornflowerblue, midnightblue);; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Josefin Slab', serif;
+    color: #f1f1f1;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: lightpink;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
